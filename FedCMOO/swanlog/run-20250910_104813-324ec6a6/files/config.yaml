@@ -1,0 +1,156 @@
+algorithm:
+  desc: ''
+  sort: 1
+  value: fsmgda_vr
+algorithm_args:
+  desc: ''
+  sort: 2
+  value:
+    fedadam:
+      beta: 0.9
+      control_momentum: 1
+      count_decoders: false
+      normalize_grad: true
+      normalize_updates: false
+      scale_decoders: false
+      scale_lr: 0.001
+      scale_momentum: 0
+      scale_n_iter: 1000
+    fedcmoo:
+      count_decoders: false
+      normalize_grad: false
+      normalize_updates: false
+      scale_decoders: false
+      scale_lr: 0.001
+      scale_momentum: 0
+      scale_n_iter: 1000
+    fedcmoo_pref:
+      count_decoders: false
+      min_weight_multiplier: 0.2
+      normalize_updates: false
+      preference: uniform
+      scale_decoders: true
+    fsmgda:
+      compression: false
+      count_decoders: false
+      normalize_local_iters: false
+      normalize_updates: false
+      scale_decoders: true
+    fsmgda_vr:
+      beta: 0.9
+      compression: false
+      count_decoders: false
+      lipschitz: 0.1
+      normalize_local_iters: null
+      normalize_updates: false
+      scale_decoders: true
+clients:
+  desc: ''
+  sort: 0
+  value:
+    data_points: 400
+    do_test: false
+    partition_seed: 10
+    test_partition: 0
+    total: 10
+data:
+  desc: ''
+  sort: 14
+  value:
+    diric_alpha: 0.3
+    distribution: dirichlet_all_labels
+    pre_transform: true
+    test_batch_size: 3000
+    testset_device: cpu
+    trainset_device: cpu
+    val_ratio: 0.2
+    val_seed: 1
+    valset_device: cpu
+data_seed:
+  desc: ''
+  sort: 12
+  value: 1
+exp_identifier:
+  desc: ''
+  sort: 4
+  value: v1
+experiment:
+  desc: ''
+  sort: 3
+  value: MultiMNIST
+hyperparameters:
+  desc: ''
+  sort: 13
+  value:
+    global_lr: 1
+    local_training:
+      batch_size: 128
+      local_lr: 0.3
+      local_lr_scheduler_flag: true
+      local_momentum: 0
+      nb_of_local_rounds: 10
+      optimizer: SGD
+logging:
+  desc: ''
+  sort: 17
+  value:
+    print_logs: true
+    save_logs: true
+max_round:
+  desc: ''
+  sort: 8
+  value: 200
+metrics:
+  desc: ''
+  sort: 15
+  value:
+    model_save_period: 0
+    test_period: 3
+    train_period: 1
+    val_period: 3
+model_device:
+  desc: ''
+  sort: 11
+  value: cpu
+nb_of_participating_clients:
+  desc: ''
+  sort: 7
+  value: 10
+paths:
+  desc: ''
+  sort: 10
+  value:
+    data: ./data
+    experiment_history: ./experiment_history
+    experiments: ./experiments
+proposed_approx_extra_upload_d:
+  desc: ''
+  sort: 5
+  value: 1
+proposed_approx_method:
+  desc: ''
+  sort: 6
+  value: randsvd
+reload_exp:
+  desc: ''
+  sort: 16
+  value:
+    flag: false
+    folder_name: demo
+swanlab:
+  desc: ''
+  sort: 9
+  value:
+    flag: true
+    run_group: ''
+    wandb_project_name: test
+    wandb_runname: 娴嬭瘯
+    wandb_workspace: zhuyuelei
+wandb:
+  desc: ''
+  sort: 18
+  value:
+    flag: false
+    run_group: ''
+    wandb_project_name: default_project
+    wandb_runname: ''
